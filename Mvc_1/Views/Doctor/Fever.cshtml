@@ -7,3 +7,9 @@
 <h1>Fever</h1>
 <h2>@Model.message</h2>
 
+   @using (Html.BeginForm("Fever", "Doctor", FormMethod.Post))
+{
+     <input type="number" name="temp">
+        <input type="submit" value="submit" name="submit">
+}
+

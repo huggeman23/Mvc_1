@@ -10,18 +10,24 @@
             message = tempCalc(temp);
         }
         public static string tempCalc(int teprature) {
-            if (teprature >= 38)
-            {
-                return "you have fever";
+            
+                if (teprature >= 38)
+                {
+                    return "you have fever";
 
-            }else if (teprature <= 35)
-            {
-                return "you have hypothermia";
-            }
-            else
-            {
-                return "you are fine";
-            }
+                }
+                else if (teprature == 0)
+                {
+                    return "";
+                }
+                else if (teprature <= 35)
+                {
+                    return "you have hypothermia";
+                }               
+                else
+                {
+                    return "you are fine";
+                }
             
         }
     }

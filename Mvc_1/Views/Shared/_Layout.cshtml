@@ -11,17 +11,12 @@
         <div>@Html.ActionLink("About","Index","Home")</div>
         <div>@Html.ActionLink("Contact","Contact","Home")</div>
         <div>@Html.ActionLink("Projects","Projects","Home")</div>
+        <div>@Html.ActionLink("Fever","Fever","Doctor")</div>
     </header>
 
     <div>
         @RenderBody()
-    </div>
-    @using (Html.BeginForm("Fever", "Doctor", FormMethod.Post))
-{
-     <input type="number" value="0" name="temp">
-        <input type="submit" value="submit" name="submit">
-}
-    
+    </div>   
     
     <footer>@DateTime.Today hugo nyman</footer>
 </body>
