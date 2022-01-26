@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "GuessNumber";
+    
+}
+
+<h1>GuessNumber</h1>
+<p>Guess a number betwen 1 and 100</p>
+<p>@ViewBag.Message</p>
+
+   @using (Html.BeginForm("GuessNumber", "Home", FormMethod.Post))
+{
+
+     <input type="number" name="number" min="1" max="100">
+        <input type="submit" value="submit" name="submit">
+}
