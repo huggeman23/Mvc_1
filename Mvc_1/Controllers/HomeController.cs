@@ -22,12 +22,18 @@ namespace Mvc_1.Controllers
 
             return View();
         }
-        public IActionResult GuessNumber()
+        public IActionResult GNumber()
         {
             var num = new Random();
             int j = num.Next(1, 100);
-            HttpContext.Session.SetInt32("num",j);
-            
+            HttpContext.Session.SetInt32("num", j);
+            ViewBag.Message = j;
+            return RedirectToAction("GuessNumber");
+        }
+        public IActionResult GuessNumber()
+        {
+            int num = (int)HttpContext.Session.GetInt32("num");
+            ViewBag.Message =  num;
             return View();
         }
         [HttpPost]
@@ -46,7 +52,7 @@ namespace Mvc_1.Controllers
             else
             {
 
-                return RedirectToAction("GuessNumber","Home");
+                return RedirectToAction("GNumber");
             }
         }
     }

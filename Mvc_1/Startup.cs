@@ -43,6 +43,10 @@ namespace Mvc_1
                     name: "default",
                     pattern: "{controller=Doctor}/{action=Fever}/{id?}"
                     );
+                endpoints.MapControllerRoute(
+                    name: "default",                    
+                    pattern: "GuessGame/{controller=Home}/{action=GNumber}/{id?}"
+                    );
             });
         }
     }
