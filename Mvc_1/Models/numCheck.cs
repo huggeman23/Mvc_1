@@ -5,7 +5,11 @@
         public string numValid(int number, int num)
         {
 
-             if (number > num)
+             if (number == 0)
+            {
+                return "invalid";
+            }
+            else if (number > num)
             {
                 return "To heigh";
             }

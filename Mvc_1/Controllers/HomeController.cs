@@ -27,13 +27,12 @@ namespace Mvc_1.Controllers
             var num = new Random();
             int j = num.Next(1, 100);
             HttpContext.Session.SetInt32("num", j);
-            ViewBag.Message = j;
+           
             return RedirectToAction("GuessNumber");
         }
         public IActionResult GuessNumber()
         {
-            int num = (int)HttpContext.Session.GetInt32("num");
-            ViewBag.Message =  num;
+            
             return View();
         }
         [HttpPost]
